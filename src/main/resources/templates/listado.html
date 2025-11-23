@@ -1,0 +1,27 @@
+<!--supress htmlUnknownAttribute-->
+
+<!DOCTYPE html>
+<h2>Usuarios Registrados</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Acciones</th>
+        </tr>
+           </thead>
+    <tbody>
+        <tr th:each="usuario: ${usuarios}">
+            <td th:text="${usuario.idUsuario}"></td>           
+            <td th:text="${usuario.nombre}"></td>           
+            <td th:text="${usuario.email}"></td>           
+            <td>
+            
+                <a th:href="@{ '/editar/' + ${usuario.idUsuario}}">Editar</a>
+                <a th:href="@{ '/eliminar/' + ${usuario.idUsuario}}" onclick="return confirm('¿Estás seguro de eliminar este usuario?');">
+            </td>
+
+        </tr>
+    </tbody>
+</html>

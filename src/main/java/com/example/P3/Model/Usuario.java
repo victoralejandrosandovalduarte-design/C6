@@ -1,7 +1,31 @@
-package com.example.P3.model;
+package com.example.P3.Model;
+
+import lombok.Data;
+import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+
+
+@Data
+@Entity
+
 
 public class Usuario {
-
+    
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
+        private Long idUsuario; 
+        private String nombre;
+        private String email;
+    
+    
+    
+    }
+    
+/*
     private String nombre;
     private String apellido;
     private String correo;
@@ -12,15 +36,19 @@ public class Usuario {
     private int cedula;
     private String oficio;
     private int salario;
+    */
     
-    public Usuario() {}
+    
+    
+    
+    /**public Usuario() {}*/
     /*se realiza una vista publica - nombre (retornable)*/
-        public String getNombre(){
+   /*     public String getNombre(){
             return nombre;
         }
-        
+        */
         /*Se realiza la acción envío (no retornable)*/
-        public void setNombre(String nombre){
+        /*public void setNombre(String nombre){
             this.nombre = nombre;
             
         }
@@ -93,5 +121,7 @@ public class Usuario {
         }
         public void setSalario(){
         this.salario = salario;
-        }        
-}
+    
+    
+        }        */
+
