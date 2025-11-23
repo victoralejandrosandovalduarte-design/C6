@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    
+ 
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario de usuario</title>
+    </head>
+    <body>
+        
+        <h1>Formulario de registro</h1>
+        
+        <form th:action="@{/procesar}" th:object="${usuario}" method="post">
+   
+            
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" required /><br></br>
+        
+        <label>Apellido:</label>
+        <input type="text" th:field="*{apellido}" required /><br></br>
+        
+        <label>Correo:</label>
+        <input type="email" th:field="*{correo}" required /><br></br>
+        
+        <label>Barrio:</label>
+        <input type="text" th:field="*{barrio}" required /><br></br>
+        
+        <label>Ciudad:</label>
+        <input type="text" th:field="*{ciudad}" required /><br></br>
+        
+        <label>Pais</label>
+        <input type="text" th:field="*{pais}" required /><br></br>
+        
+        <label>Teléfono:</label>
+        <input type="text" th:field="*{telef}" required /><br></br>
+        
+        <label>Cédula:</label>
+        <input type="number" th:field="*{cedula}" required /><br></br>
+        
+        <label>Profesión u Oficio:</label>
+        <input type="text" th:field="*{oficio}" required /><br></br>
+        
+        <label>Salario bruto:</label>
+        <input type="text" th:field="*{salario}" required /><br></br>
+        
+        
+      
+        
+        <button type="submit">Enviar</button>
+        
+        
+    </body>
+</html>

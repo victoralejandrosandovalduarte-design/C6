@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Clase 5 - Capas Vista, Controlador, Modelo y Servicio (dar diseño con thymeleaf - copilot, opcional) </title>
+        <meta charset="UTF-8">
+        <style>
+             body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+
+            /* Fondo negro con difuminado rojo */
+            background: radial-gradient(circle at center, rgba(255, 0, 0, 0.4), rgba(0, 0, 0, 1));
+            color: white;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+        }
+
+        .card h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            background: red;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #ff4d4d;
+        }
+    </style>
+        
+    </head>
+    <body>
+        
+        <div class="card">
+            <h1>Clase 6 -Welcome</h2>
+            <a th:href="@{/formulario}" class="btn">IRA LA TAREA 6 </a>
+        </div>
+    
+    </body>
+</html>
